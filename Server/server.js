@@ -5,13 +5,14 @@ const mongoose = require('mongoose');
 const port = 5500
 const DataModel = require('./model/index.js');
 
-app.use(cors(
-    {
-        origin: '*',
-        methods: ['GET', 'POST'],
-        credentials: true,
-    }
-));
+app.use(cors({
+    origin: (origin, callback) => {
+        callback(null, origin || '*'); // Allow all origins
+    },
+    methods: ['GET', 'POST'],
+    credentials: true,
+}));
+
 app.use(express.json());
 
 mongoose.connect('mongodb+srv://kishanurankar:kishanurankar@cluster0.qqlsq.mongodb.net/dummydatabase?retryWrites=true&w=majority&appName=Cluster0').then(()=>{

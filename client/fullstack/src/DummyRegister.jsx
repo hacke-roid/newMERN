@@ -31,7 +31,7 @@ const DummyRegister = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await axios.get("http://localhost:5500/employees");
+      const data = await axios.get("https://new-mern-api-rho.vercel.app");
       console.log(data.data);
       setInputData({ ...inputData, data: data.data });
     };
