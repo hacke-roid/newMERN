@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    flex-direction: column;
+    background-color: rgb(247, 189, 83);
+    gap: 30px;
+}
+
+.login-details{
+    /* border: 2px solid black; */
+    height: 200px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.login-details input{
+    width: 300px;
+    height: 30px;
+}
+
+button{
+    width: 310px;
+    height: 40px;
+}
+
