@@ -6,11 +6,9 @@ const port = 5500
 const DataModel = require('./model/index.js');
 
 app.use(cors({
-    origin: (origin, callback) => {
-        callback(null, origin || '*'); // Allow all origins
-    },
+    origin: "*",
     methods: ['GET', 'POST'],
-    credentials: true,
+    // credentials: true,
 }));
 
 app.use(express.json());
