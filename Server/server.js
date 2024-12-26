@@ -7,7 +7,7 @@ const DataModel = require('./model/index.js');
 
 app.use(cors(
     {
-        origin: 'http://localhost:3000',
+        origin: '*',
         methods: ['GET', 'POST'],
         credentials: true,
     }
